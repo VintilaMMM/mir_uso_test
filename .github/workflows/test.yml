@@ -1,9 +1,11 @@
-name: test1
+name: test
 on: push
 jobs:
         test:
                 runs-on: ubuntu-latest
                 steps:
                         - uses: actions/checkout@v2
-                        - run: echo "Mircea Vintila"
+                        - run: echo "Mircea Vintilă"
                         - run: make add
+                        - run: tests/test1.sh
+                        - run: tests/test2.sh
